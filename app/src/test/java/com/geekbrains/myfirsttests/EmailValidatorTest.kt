@@ -1,7 +1,6 @@
 package com.geekbrains.myfirsttests
 
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
+import org.junit.Assert.*
 import org.junit.Test
 
 class EmailValidatorTest {
@@ -47,7 +46,7 @@ class EmailValidatorTest {
     }
 
     @Test
-    fun emailValidator_InvalidEmailExceededMaxNumberCharacters_ReturnFalse() {
+    fun emailValidator_InvalidEmailExceededMaxNumberDomainCharacters_ReturnFalse() {
         assertFalse(EmailValidator.isValidEmail("name@email.commmmmmmmmmmmmmmmmmmmmmmmm"))
     }
 
